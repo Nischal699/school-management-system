@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
-from account.models User
+from .models import User
 
 class LoginForm(forms.Form):
     username=forms.CharField(
@@ -50,4 +50,4 @@ class SignUpForm(UserCreationForm):
     
     class Meta:
         model = User
-        fields = ('username','email','password1','password2'.'is_customer')
+        fields = ('username','email','password1','password2','is_student')

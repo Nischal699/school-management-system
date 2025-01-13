@@ -32,14 +32,11 @@
 
         <li class="{% if request.path == '/contactUs/' %} active {% endif %}"><a href="{% url 'contactUs' %}" class="active">Contact Us</a></li>
 
-        <li class="{% if request.path == '/adminLogin/' %} active {% endif %}"><a href="{% url 'adminLogin' %}" class="active">Admin Login</a></li>
-        <li class="{% if request.path == '/teacherLogin/' %} active {% endif %}"><a href="{% url 'teacherLogin' %}" class="active">Teacher Login</a></li>
-        <li class="{% if request.path == '/studentLogin/' %} active {% endif %}"><a href="{% url 'studentLogin' %}" class="active">Student Login</a></li>
+        <!---------------Login----------------->
+
+        <li class="{% if request.path == '/loginPage/' %} active {% endif %}"><a href="{% url 'loginPage' %}" class="active">Login</a></li>
+
 
         </ul>
 
-        <!---------------Login----------------->
-
-        <li class="{% if request.path == '/login/' %} active {% endif %}"><a href="{% url 'login' %}" class="active">Login</a></li>
-        <li class="{% if request.path == '/register/' %} active {% endif %}"><a href="{% url 'register' %}" class="active">Register</a></li>
     </header>
