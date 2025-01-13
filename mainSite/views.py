@@ -9,35 +9,6 @@ def homePage(request):
     }
     return render(request,"index.html",data)
 
-#----------------ABOUT-US----------------------
-#Introduction
-def introduction(request):
-    return render(request,"introduction.html")
-
-
-#----------------PROGRAMS----------------------
-
-#Pre-school
-def preSchool(request):
-    return render(request,"pre-school.html")
-
-#Primary-school
-def primarySchool(request):
-    return render(request,"primary-school.html")
-
-#Secondary-school
-def secondarySchool(request):
-    return render(request,"secondary-school.html")
-
-
-#-----------------ADMISSION-----------------------
-def admission(request):
-    data={
-        'title':'Contact',
-        'name':'Nischal'
-    }
-    return render(request,"admission.html",data)
-
 #-----------------NEWS/EVENTS----------------------
 def news(request):
     data={
@@ -53,14 +24,6 @@ def studentForm(request):
         'name':'Nischal'
     }
     return render(request,"studentform.html",data)
-
-#-------------------PAYEMENT NOTICE-----------------------
-def paymentNotice(request):
-    data={
-        'title':'Contact',
-        'name':'Nischal'
-    }
-    return render(request,"paymentNotice.html",data)
 
 #--------------------CONTACT US----------------------------
 def contactUs(request):
@@ -95,3 +58,19 @@ def studentLogin(request):
         'name':'Nischal'
     }
     return render(request,"studentLogin.html",data)
+
+
+#LOGIN
+def login(request):
+    data={
+        'title':'Contact',
+        'name':'Nischal'
+    }
+    return render(request,"login.html",data)
+
+def register(request):
+    data={
+        'title':'Contact',
+        'name':'Nischal'
+    }
+    return render(request,"register.html",data)

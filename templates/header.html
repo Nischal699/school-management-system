@@ -17,69 +17,8 @@
         <!---------------Home----------------->
 
         <ul class="navlist">
-            <li class="{% if request.path == '/' %}  {% endif %}"><a href="{% url 'home' %}" class="active">Home</a></li>
+            <li class="{% if request.path == '/' %} active {% endif %}"><a href="{% url 'home' %}" class="active">Home</a></li>
 
-        <!---------------About_Us----------------->
-         
-        <div class="dropdown">
-                <button class="dropbtn" onclick="myFunction1()">About_Us
-                  <i class="fa fa-caret-down"></i>
-                </button>
-            <div class="dropdown-content" id="myDropdown1">
-                <li class="{% if request.path == '/introduction/' %} active {% endif %}">
-                <a href="{% url 'introduction' %}" class="active">Introduction</a>
-                </li>
-            </div>
-        </div> 
-
-
-            <script>
-                function myFunction1() {
-                document.getElementById("myDropdown1").classList.toggle("show");
-                }
-                window.onclick = function(e) {
-                if (!e.target.matches('.dropbtn')) {
-                var myDropdown = document.getElementById("myDropdown1");
-                    if (myDropdown.classList.contains('show')) {
-                    myDropdown.classList.remove('show');
-                    }
-                }
-                }
-
-            </script>
-
-        <!---------------Programs----------------->
-
-        <div class="dropdown">
-                <button class="dropbtn" onclick="myFunction2()">Programs
-                <i class="fa fa-caret-down"></i>
-                </button>
-            <div class="dropdown-content" id="myDropdown2">
-                <li class="{% if request.path == '/preSchool/' %} active {% endif %}"><a href="{% url 'preSchool' %}" class="active">PreSchool</a></li>
-                <li class="{% if request.path == '/primarySchool/' %} active {% endif %}"><a href="{% url 'primarySchool' %}" class="active">PrimarySchool</a></li>
-                <li class="{% if request.path == '/secondarySchool/' %} active {% endif %}"><a href="{% url 'secondarySchool' %}" class="active">SecondarSchool</a></li>
-            </div>
-        </div> 
-
-
-            <script>
-                function myFunction2() {
-                document.getElementById("myDropdown2").classList.toggle("show");
-                }
-                window.onclick = function(e) {
-                if (!e.target.matches('.dropbtn')) {
-                var myDropdown = document.getElementById("myDropdown2");
-                    if (myDropdown.classList.contains('show')) {
-                    myDropdown.classList.remove('show');
-                    }
-                }
-                }
-
-            </script>
-          
-        <!---------------Admission----------------->
-
-        <li class="{% if request.path == '/admission/' %} active {% endif %}"><a href="{% url 'admission' %}" class="active">Admission</a></li>
 
         <!---------------News----------------->
 
@@ -89,41 +28,18 @@
 
         <li class="{% if request.path == '/studentForm/' %} active {% endif %}"><a href="{% url 'studentForm' %}" class="active">Student Form</a></li>
 
-        <!---------------Payment Notice----------------->
-
-        <li class="{% if request.path == '/paymentNotice/' %} active {% endif %}"><a href="{% url 'paymentNotice' %}" class="active">Payment Notice</a></li>
-
         <!---------------Contact Us----------------->
 
         <li class="{% if request.path == '/contactUs/' %} active {% endif %}"><a href="{% url 'contactUs' %}" class="active">Contact Us</a></li>
+
+        <li class="{% if request.path == '/adminLogin/' %} active {% endif %}"><a href="{% url 'adminLogin' %}" class="active">Admin Login</a></li>
+        <li class="{% if request.path == '/teacherLogin/' %} active {% endif %}"><a href="{% url 'teacherLogin' %}" class="active">Teacher Login</a></li>
+        <li class="{% if request.path == '/studentLogin/' %} active {% endif %}"><a href="{% url 'studentLogin' %}" class="active">Student Login</a></li>
 
         </ul>
 
         <!---------------Login----------------->
 
-            <div class="dropdown">
-                    <button class="dropbtn" onclick="myFunction3()">LOGIN:
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content" id="myDropdown3">
-                    <li class="{% if request.path == '/adminLogin/' %} active {% endif %}"><a href="{% url 'adminLogin' %}" class="active">Admin Login</a></li>
-                    <li class="{% if request.path == '/teacherLogin/' %} active {% endif %}"><a href="{% url 'teacherLogin' %}" class="active">Teacher Login</a></li>
-                    <li class="{% if request.path == '/studentLogin/' %} active {% endif %}"><a href="{% url 'studentLogin' %}" class="active">Student Login</a></li>
-                </div>
-            </div> 
-
-            <script>
-                function myFunction3() {
-                    document.getElementById("myDropdown3").classList.toggle("show");
-            }
-            window.onclick = function(e) {
-            if (!e.target.matches('.dropbtn')) {
-            var myDropdown = document.getElementById("myDropdown3");
-                if (myDropdown.classList.contains('show')) {
-                myDropdown.classList.remove('show');
-                }
-            }
-            }
-
-    </script>
+        <li class="{% if request.path == '/login/' %} active {% endif %}"><a href="{% url 'login' %}" class="active">Login</a></li>
+        <li class="{% if request.path == '/register/' %} active {% endif %}"><a href="{% url 'register' %}" class="active">Register</a></li>
     </header>
