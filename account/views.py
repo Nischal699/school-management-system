@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from .forms import SignUpForm,LoginForm
-from django.contrib.auth import authenticate,login
+from django.contrib.auth import authenticate,login,logout
 from django.http import HttpResponse,HttpResponseRedirect
 
 # Create your views here.
@@ -60,6 +60,9 @@ def auth_login(request):
         else:
             msg = 'error validation form'
     return render(request,'login.html',{'form':form,'msg':msg})
+
+def logout(request):
+    return render(request,'index.html')
 
 def adminPage(request):
     return render(request,'adminLogin.html')

@@ -36,6 +36,10 @@
 
         <li class="{% if request.path == '/loginPage/' %} active {% endif %}"><a href="{% url 'loginPage' %}" class="active">Login</a></li>
 
+        <!---------------Log out----------------->
+
+        <li class="{% if request.path == '/logout/' %} active {% endif %}"><a href="{% url 'logout' %}" class="active">Log Out</a></li>
+
 
         </ul>
 
